@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <!-- 引入 Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background-color: #333;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        /* 主要内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 20px;
+            padding: 20px;
+        }
+
+        /* 个人简介 */
+        .about {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* 照片墙 */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .photo-item {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* 社交媒体链接 */
+        .social-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            font-size: 2rem;
+            color: #333;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="#home">首页</a>
+        <a href="#about">关于我</a>
+        <a href="#photos">照片</a>
+        <a href="#contact">联系</a>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="container">
+        <!-- 个人简介 -->
+        <section class="about" id="about">
+            <img src="lily.jpg" alt="我的头像"> <!-- 替换为你的头像路径 -->
+            <h1>Hello, I am LIU Lirong, Lily.</h1>
+            <p>热爱旅行、摄影和分享生活点滴的普通人。</p>
+        </section>
+
+        <!-- 照片墙 -->
+        <section class="photo-grid" id="photos">
+            <img src="tw.jpg" class="photo-item" alt="照片1"> <!-- 替换为你的照片路径 -->
+            <img src="sgp.jpg" class="photo-item" alt="照片2">
+            <img src="hk.jpg" class="photo-item" alt="照片3">
+            <!-- 添加更多照片 -->
+        </section>
+
+        <!-- 社交媒体链接 -->
+        <div class="social-links" id="contact">
+            <a href="https://instagram.com/predatorlily" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/lilypredator" target="_blank"><i class="fab fa-x"></i></a>
+            <a href="https://linkedin.com/in/predator-lily" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/predatorlily" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://weibo.com/u/6424978971" target="_blank"><i class="fab fa-weibo"></i></a>
+            <a href="https://www.threads.net/@predatorlily?igshid=NTc4MTIwNjQ2YQ==" target="_blank">@</a>
+            <a href="https://www.xiaohongshu.com/user/profile/64f8934300000000040259b1" target="_blank">小红书</a>
+            <a href="https://maimai.cn/contact/share/card?u=ntwlswilzncb&_share_channel=copy_link" target="_blank">脉脉</a>
+            <!-- 添加更多平台 -->
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2025 smart-lily. 保留所有权利。</p>
+    </footer>
+
+    <!-- 简单交互 -->
+    <script>
+        // 图片点击放大（示例）
+        document.querySelectorAll('.photo-item').forEach(item => {
+            item.addEventListener('click', () => {
+                window.open(item.src, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
