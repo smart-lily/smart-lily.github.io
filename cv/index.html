@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>刘力荣 · Resume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="lang-switch">
+    <button id="btn-zh" class="active">中文</button>
+    <button id="btn-en">English</button>
+  </div>
+
+  <!-- RESUME_DATA_BEGIN
+{
+  "zh": {
+    "name": "刘力荣",
+    "english_name": "Liu Lirong",
+    "contact": {
+      "gender": "男",
+      "age": "25",
+      "city": "中国, 广东",
+      "phone": "13318666100",
+      "email_primary": "predator-lily@outlook.com",
+      "email_secondary": "predator-lily@foxmail.com",
+      "github_url": "https://github.com/smart-lily",
+      "linkedin_url": "https://www.linkedin.com/in/predator-lily/"
+    ],
+    "education": [
+      {
+        "school": "暨南大学",
+        "date": "2019.09 - 2023.06",
+        "degree": "本科 · 软件工程",
+        "keywords": "Python, Java, C/C++, Git, Vim, Linux, VS Code, SpringBoot, Docker, K8s, Redis, Kafka, Vue"
+      },
+      {
+        "school": "香港城市大学",
+        "date": "2024.01 - 2025.02",
+        "degree": "硕士 · 计算机科学",
+        "keywords": "PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib, GitHub Copilot, Claude Code, OpenClaw"
+      }
+    ],
+    "experience": [
+      {
+        "company": "珠海市暨优机器人智能科技有限公司",
+        "role": "研究助理",
+        "city": "珠海",
+        "date": "2023.05 - 2023.11",
+        "bullets": [
+          "负责视觉巡航小车的全栈开发。Keywords: 华为Altas开发板, ROS, YOLO, LaneNet。",
+          "负责油漆桶贴标机的研发。Keywords: 英伟达Nano开发板, YOLO, 线性回归。"
+        ]
+      },
+      {
+        "company": "中国科学院香港创新研究院人工智能与机器人创新中心",
+        "role": "软件开发实习生",
+        "city": "香港",
+        "date": "2024.06 - 2024.12",
+        "bullets": [
+          "基于视觉的RGBD三维摄像头坐标系和机械臂坐标系同步算法开发。",
+          "智能超声助手CARES Copilot多端通信架构设计和开发。"
+        ]
+      },
+      {
+        "company": "华为科技有限公司",
+        "role": "AI工程师",
+        "city": "上海",
+        "date": "2025.05 - 2026.05",
+        "bullets": [
+          "基于LLM的无线基站场景下场所识别数据标注算法开发。",
+          "AI智能报表Agent中智能体工具调用和数据分析工具的开发。"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "智能超声助手 CARES Copilot",
+        "desc": "用于辅助医生和患者进行超声检查的语音助手",
+        "date": "2024.06 - 2024.12",
+        "bullets": [
+          "技术栈: Python, Redis",
+          "设计和实现超声助手端语音唤醒到输出语音结果和工具调用的Workflow。",
+          "使用Redis消息队列实现超声助手端和LLM服务端通信，支持并发请求和异步响应。",
+          "基于多进程，多线程和协程实现LLM服务端的各模块间通信，针对不同模型部署方式减少性能损失。"
+        ]
+      },
+      {
+        "name": "LLM数据标注",
+        "desc": "基于联网工具实现数据增强的数据标注算法",
+        "date": "2025.10 - 2025.12",
+        "bullets": [
+          "技术栈: Python, OpenAI",
+          "基于联网搜索工具，高德地图API和MCP服务实现场所信息的获取，补全和纠错。",
+          "本地部署Qwen3-30B模型融合内部数据进行数据提取，数据标注，确保信息安全。",
+          "基于高德地图API开发前端地图标点工具，在地图上展示标注结果，辅助结果评估和场所识别算法开发。"
+        ]
+      },
+      {
+        "name": "AI智能报表Agent",
+        "desc": "用于辅助移动核心网运维的智能问答助手",
+        "date": "2026.02 - 2026.05",
+        "bullets": [
+          "技术栈: Python, LangGraph",
+          "基于内部类似Dify的工具实现智能问答助手的Workflow，完成可行性验证。",
+          "迁移到LangGraph框架，优化工具调用的代码设计，提升系统的可扩展性。",
+          "针对移动核心网运维场景数据集设计检索增强生成（RAG）向量库和策略。",
+          "针对小模型和长上下文的场景优化Prompt Engineering，提升模型的理解和生成能力。"
+        ]
+      }
+    ]
+  },
+  "en": {
+    "name": "LIU Lirong",
+    "contact": {
+      "gender": "Male",
+      "age": "25",
+      "city": "China, Guangdong",
+      "phone": "13318666100",
+      "email_primary": "predator-lily@outlook.com",
+      "email_secondary": "predator-lily@foxmail.com",
+      "github_url": "https://github.com/smart-lily",
+      "linkedin_url": "https://www.linkedin.com/in/predator-lily/"
+    ],
+    "education": [
+      {
+        "school": "Jinan University",
+        "date": "2019.09 - 2023.06",
+        "degree": "Bachelor · Software Engineering",
+        "keywords": "Python, Java, C/C++, Git, Vim, Linux, VS Code, SpringBoot, Docker, K8s, Redis, Kafka, Vue"
+      },
+      {
+        "school": "City University of Hong Kong",
+        "date": "2024.01 - 2025.02",
+        "degree": "Master · Computer Science",
+        "keywords": "PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib, GitHub Copilot, Claude Code, OpenClaw"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Zhuhai Jiyou Robotics Intelligent Technology Co., Ltd.",
+        "role": "Research Assistant",
+        "city": "Zhuhai",
+        "date": "2023.05 - 2023.11",
+        "bullets": [
+          "Led full-stack development for a visual patrol vehicle. Keywords: Huawei Atlas board, ROS, YOLO, LaneNet.",
+          "Developed a paint-bucket labeling machine. Keywords: NVIDIA Nano board, YOLO, linear regression."
+        ]
+      },
+      {
+        "company": "CAS Hong Kong Innovation Institute, AIR Center",
+        "role": "Software Development Intern",
+        "city": "Hong Kong",
+        "date": "2024.06 - 2024.12",
+        "bullets": [
+          "Developed synchronization algorithms between RGBD camera coordinates and robotic arm coordinates.",
+          "Designed and developed cross-device communication architecture for CARES Copilot."
+        ]
+      },
+      {
+        "company": "Huawei Technologies Co., Ltd.",
+        "role": "AI Engineer",
+        "city": "Shanghai",
+        "date": "2025.05 - 2026.05",
+        "bullets": [
+          "Developed LLM-based place recognition data annotation algorithms for wireless base-station scenarios.",
+          "Developed agent tool-calling and data analysis tools for an AI reporting assistant."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "CARES Copilot for Intelligent Ultrasound",
+        "desc": "Voice assistant to support doctors and patients in ultrasound exams",
+        "date": "2024.06 - 2024.12",
+        "bullets": [
+          "Tech stack: Python, Redis",
+          "Designed and implemented the workflow from voice wake-up to speech response and tool invocation.",
+          "Used Redis message queues for assistant-server communication with concurrent requests and async responses.",
+          "Implemented inter-module communication with multiprocessing, multithreading, and coroutines to reduce performance loss under different deployment modes."
+        ]
+      },
+      {
+        "name": "LLM Data Annotation",
+        "desc": "Data-enhancement annotation pipeline using online tools",
+        "date": "2025.10 - 2025.12",
+        "bullets": [
+          "Tech stack: Python, OpenAI",
+          "Integrated web search tools, Amap API, and MCP services for place information retrieval, completion, and correction.",
+          "Locally deployed Qwen3-30B with internal data for extraction and annotation to ensure data security.",
+          "Built a frontend map-pointing tool with Amap API to visualize annotations and support evaluation and place-recognition development."
+        ]
+      },
+      {
+        "name": "AI Intelligent Reporting Agent",
+        "desc": "Intelligent Q&A assistant for mobile core network O&M",
+        "date": "2026.02 - 2026.05",
+        "bullets": [
+          "Tech stack: Python, LangGraph",
+          "Built a PoC workflow using an internal Dify-like toolchain.",
+          "Migrated to LangGraph and optimized tool-calling architecture to improve extensibility.",
+          "Designed RAG vector-store strategies for mobile core network O&M datasets.",
+          "Optimized prompt engineering for small-model and long-context scenarios to improve understanding and generation quality."
+        ]
+      }
+    ]
+  }
+}
+    RESUME_DATA_END -->
+
+  <main class="resume" data-lang="zh">
+    <header class="hero">
+      <div class="row">
+        <h1>刘力荣</h1>
+        <span>☎ +86 13318666100</span>
+      </div>
+      <div class="row">
+        <span>男</span>
+        <span><a href="mailto:predator-lily@foxmail.com" target="_blank" rel="noreferrer">predator-lily@foxmail.com</a></span>
+      </div>
+      <div class="row">
+        <span>25岁</span>
+        <span><a href="https://github.com/smart-lily" target="_blank" rel="noreferrer">GitHub Profile</a></span>
+      </div>
+      <div class="row">
+        <span>广东</span>
+        <span><a href="https://www.linkedin.com/in/predator-lily/" target="_blank" rel="noreferrer">LinkedIn Profile</a></span>
+      </div>
+    </header>
+    <section>
+      <h2>教育经历</h2>
+      <div class="row">
+        <strong>暨南大学</strong>
+        <span>2019.09 - 2023.06</span>
+      </div>
+      <div class="row">
+        <span>软件工程</span>
+        <span>本科</span>
+      </div>
+      <div class="row">
+        <strong>香港城市大学</strong>
+        <span>2024.01 - 2025.02</span>
+      </div>
+      <div class="row">
+        <span>计算机科学</span>
+        <span>硕士</span>
+      </div>
+    </section>
+    <section>
+      <h2>工作经历</h2>
+      <div class="row">
+        <strong>珠海市暨优机器人智能科技有限公司</strong>
+        <span>2023.05 - 2023.11</span>
+      </div>
+      <div class="row">
+        <span>研究助理 · 珠海</span>
+        <span></span>
+      </div>
+      <ul>
+        <li>负责视觉巡航小车的全栈开发。Keywords: 华为Altas开发板, ROS, YOLO, LaneNet。</li>
+        <li>负责油漆桶贴标机的研发。Keywords: 英伟达Nano开发板, YOLO, 线性回归。</li>
+      </ul>
+      <div class="row">
+        <strong>中国科学院香港创新研究院人工智能与机器人创新中心</strong>
+        <span>2024.06 - 2024.12</span>
+      </div>
+      <div class="row">
+        <span>软件开发实习生 · 香港</span>
+        <span></span>
+      </div>
+      <ul>
+        <li>基于视觉的RGBD三维摄像头坐标系和机械臂坐标系同步算法开发。</li>
+        <li>智能超声助手CARES Copilot多端通信架构设计和开发。</li>
+      </ul>
+      <div class="row">
+        <strong>华为科技有限公司</strong>
+        <span>2025.05 - 2026.05</span>
+      </div>
+      <div class="row">
+        <span>AI工程师 · 上海</span>
+        <span></span>
+      </div>
+      <ul>
+        <li>基于LLM的无线基站场景下场所识别数据标注算法开发。</li>
+        <li>AI智能报表Agent中智能体工具调用和数据分析工具的开发。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>项目经验</h2>
+      <div class="row">
+        <strong>智能超声助手 CARES Copilot</strong>
+        <span>2024.06 - 2024.12</span>
+      </div>
+      <p>用于辅助医生和患者进行超声检查的语音助手</p>
+      <ul>
+        <li>技术栈: Python, Redis</li>
+        <li>设计和实现超声助手端语音唤醒到输出语音结果和工具调用的Workflow。</li>
+        <li>使用Redis消息队列实现超声助手端和LLM服务端通信，支持并发请求和异步响应。</li>
+        <li>基于多进程，多线程和协程实现LLM服务端的各模块间通信，针对不同模型部署方式减少性能损失。</li>
+      </ul>
+      <div class="row">
+        <strong>LLM数据标注</strong>
+        <span>2025.10 - 2025.12</span>
+      </div>
+      <p>基于联网工具实现数据增强的数据标注算法</p>
+      <ul>
+        <li>技术栈: Python, OpenAI</li>
+        <li>基于联网搜索工具，高德地图API和MCP服务实现场所信息的获取，补全和纠错。</li>
+        <li>本地部署Qwen3-30B模型融合内部数据进行数据提取，数据标注，确保信息安全。</li>
+        <li>基于高德地图API开发前端地图标点工具，在地图上展示标注结果，辅助结果评估和场所识别算法开发。</li>
+      </ul>
+      <div class="row">
+        <strong>AI智能报表Agent</strong>
+        <span>2026.02 - 2026.05</span>
+      </div>
+      <p>用于辅助移动核心网运维的智能问答助手</p>
+      <ul>
+        <li>技术栈: Python, LangGraph</li>
+        <li>基于内部类似Dify的工具实现智能问答助手的Workflow，完成可行性验证。</li>
+        <li>迁移到LangGraph框架，优化工具调用的代码设计，提升系统的可扩展性。</li>
+        <li>针对移动核心网运维场景数据集设计检索增强生成（RAG）向量库和策略。</li>
+        <li>针对小模型和长上下文的场景优化Prompt Engineering，提升模型的理解和生成能力。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>技术能力</h2>
+      <p><strong>编程语言:</strong> Python, Java, C/C++</p>
+      <p><strong>Vibe Coding:</strong> Claude Code, GitHub Copilot, OpenClaw</p>
+      <p><strong>机器学习:</strong> PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib</p>
+      <p><strong>工具:</strong> Git, Vim, Linux, VS Code, LaTeX</p>
+      <p><strong>后端/基础设施:</strong> SpringBoot, Docker, K8s, Redis, Kafka, Vue</p>
+      <p><strong>语言能力:</strong> 英语: CET-6, 粤语: 熟练</p>
+    </section>
+  </main>
+  <main class="resume" data-lang="en">
+    <header class="hero">
+      <div class="row">
+        <h1>LIU Lirong</h1>
+        <span>☎ +852 54852690</span>
+      </div>
+      <div class="row">
+        <span>Gender: Male</span>
+        <span><a href="mailto:predator-lily@outlook.com" target="_blank" rel="noreferrer">predator-lily@outlook.com</a></span>
+      </div>
+      <div class="row">
+        <span>Age: 25</span>
+        <span><a href="mailto:predatorlly@gmail.com" target="_blank" rel="noreferrer">predatorlly@gmail.com</a></span>
+      </div>
+      <div class="row">
+        <span>Visa: IANG</span>
+        <span><a href="https://github.com/smart-lily" target="_blank" rel="noreferrer">GitHub Profile</a></span>
+      </div>
+      <div class="row">
+        <span>China, Guangdong</span>
+        <span><a href="https://www.linkedin.com/in/predator-lily/" target="_blank" rel="noreferrer">LinkedIn Profile</a></span>
+      </div>
+    </header>
+    <section>
+      <h2>Education</h2>
+      <div class="row">
+        <strong>Jinan University</strong>
+        <span>2019.09 - 2023.06</span>
+      </div>
+      <div class="row">
+        <span>Software Engineering</span>
+        <span>Bachelor</span>
+      </div>
+      <div class="row">
+        <strong>City University of Hong Kong</strong>
+        <span>2024.01 - 2025.02</span>
+      </div>
+      <div class="row">
+        <span>Computer Science</span>
+        <span>Master</span>
+      </div>
+    </section>
+    <section>
+      <h2>Experience</h2>
+      <div class="row">
+        <strong>Zhuhai Jiyou Robotics Intelligent Technology Co., Ltd.</strong>
+        <span>2023.05 - 2023.11</span>
+      </div>
+      <div class="row">
+        <span>Research Assistant · Zhuhai</span>
+        <span></span>
+      </div>
+      <ul>
+        <li>Led full-stack development for a visual patrol vehicle. Keywords: Huawei Atlas board, ROS, YOLO, LaneNet.</li>
+        <li>Developed a paint-bucket labeling machine. Keywords: NVIDIA Nano board, YOLO, linear regression.</li>
+      </ul>
+      <div class="row">
+        <strong>CAS Hong Kong Innovation Institute, CAIR</strong>
+        <span>2024.06 - 2024.12</span>
+      </div>
+      <div class="row">
+        <span>Software Development Intern · Hong Kong</span>
+        <span></span>
+      </div>
+      <ul>
+        <li>Developed synchronization algorithms between RGBD camera coordinates and robotic arm coordinates.</li>
+        <li>Designed and developed cross-device communication architecture for CARES Copilot.</li>
+      </ul>
+      <div class="row">
+        <strong>Huawei Technologies Co., Ltd.</strong>
+        <span>2025.05 - 2026.05</span>
+      </div>
+      <div class="row">
+        <span>AI Engineer · Shanghai</span>
+        <span></span>
+      </div>
+      <ul>
+        <li>Developed LLM-based place recognition data annotation algorithms for wireless base-station scenarios.</li>
+        <li>Developed agent tool-calling and data analysis tools for an AI reporting assistant.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <div class="row">
+        <strong>CARES Copilot for Intelligent Ultrasound</strong>
+        <span>2024.06 - 2024.12</span>
+      </div>
+      <p>Voice assistant to support doctors and patients in ultrasound exams</p>
+      <ul>
+        <li>Tech stack: Python, Redis</li>
+        <li>Designed and implemented the workflow from voice wake-up to speech response and tool invocation.</li>
+        <li>Used Redis message queues for assistant-server communication with concurrent requests and async responses.</li>
+        <li>Implemented inter-module communication with multiprocessing, multithreading, and coroutines to reduce performance loss under different deployment modes.</li>
+      </ul>
+      <div class="row">
+        <strong>LLM Data Annotation</strong>
+        <span>2025.10 - 2025.12</span>
+      </div>
+      <p>Data-enhancement annotation pipeline using online tools</p>
+      <ul>
+        <li>Tech stack: Python, OpenAI</li>
+        <li>Integrated web search tools, Amap API, and MCP services for place information retrieval, completion, and correction.</li>
+          <li>Locally deployed Qwen3-30B with internal data for extraction and annotation.</li>
+        <li>Built a frontend map-pointing tool with Amap API to visualize annotations and support evaluation and place-recognition development.</li>
+      </ul>
+      <div class="row">
+        <strong>AI Intelligent Reporting Agent</strong>
+        <span>2026.02 - 2026.05</span>
+      </div>
+      <p>Intelligent Q&amp;A assistant for mobile core network O&amp;M</p>
+      <ul>
+        <li>Tech stack: Python, LangGraph</li>
+        <li>Built a PoC workflow using an internal Dify-like toolchain.</li>
+        <li>Migrated to LangGraph and optimized tool-calling architecture to improve extensibility.</li>
+        <li>Designed RAG vector-store strategies for mobile core network O&amp;M datasets.</li>
+        <li>Optimized prompt engineering for small-model and long-context scenarios to improve understanding and generation quality.</li>
+      </ul>
+    </section>
+      <section>
+        <h2>Technical Skills</h2>
+        <p><strong>Programming Languages:</strong> Python, Java, C/C++</p>
+        <p><strong>Vibe Coding:</strong> Claude Code, GitHub Copilot, OpenClaw</p>
+        <p><strong>Machine Learning:</strong> PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib</p>
+        <p><strong>Tools:</strong> Git, Vim, Linux, VS Code, LaTeX</p>
+        <p><strong>Backend/Infra:</strong> SpringBoot, Docker, K8s, Redis, Kafka, Vue</p>
+        <p><strong>Languages:</strong> English: CET-6, Cantonese: Fluent</p>
+      </section>
+  </main>
+
+    <script>
+        const btnZh = document.getElementById('btn-zh');
+        const btnEn = document.getElementById('btn-en');
+        const blocks = document.querySelectorAll('.resume[data-lang]');
+
+        function setLang(lang) {
+            blocks.forEach(block => {
+                block.style.display = block.getAttribute('data-lang') === lang ? 'block' : 'none';
+            });
+            btnZh.classList.toggle('active', lang === 'zh');
+            btnEn.classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            localStorage.setItem('resume-lang', lang);
+        }
+
+        btnZh.addEventListener('click', () => setLang('zh'));
+        btnEn.addEventListener('click', () => setLang('en'));
+        setLang(localStorage.getItem('resume-lang') || 'zh');
+    </script>
+</body>
+</html>
